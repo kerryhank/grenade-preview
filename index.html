@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於 Grenade 手榴彈｜科技金融資訊平台與品牌整合服務</title>
+  <meta name="description" content="Grenade 手榴彈 — 從區塊鏈到 AI，從投資理財到前沿科技，我們用專業內容與整合服務，為品牌與讀者創造最大價值。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Grenade Brand Palette (Light Theme) ===== */
+    :root {
+      --green: #23A455;
+      --green-mint: #61CE70;
+      --green-bright: #3EDBA0;
+      --green-bg: #f0faf3;
+      --green-bg-light: #f7fdf9;
+      --dark: #3E3A39;
+      --dark-deep: #121212;
+      --text: #3E3A39;
+      --text-light: #888888;
+      --text-muted: #ADADAD;
+      --border: #EAEDF1;
+      --bg-gray: #FAFBFC;
+      --bg-light: #f2f5f7;
+      --white: #ffffff;
+      --font: 'Noto Sans TC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --container: 1140px;
+      --radius: 12px;
+      --shadow-sm: 0 2px 12px rgba(0,0,0,0.04);
+      --shadow: 0 8px 30px rgba(0,0,0,0.06);
+      --shadow-hover: 0 12px 40px rgba(0,0,0,0.1);
+      --transition: 0.3s ease;
+    }
+
+    /* ===== Reset ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.8;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: var(--green); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--green-mint); }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== Shared Typography ===== */
+    .section-label {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      font-size: 16px;
+      color: var(--text-light);
+      max-width: 580px;
+      line-height: 1.8;
+    }
+
+    .section-header { margin-bottom: 56px; }
+    .section-header.center { text-align: center; }
+    .section-header.center .section-desc { margin: 0 auto; }
+
+    /* 標題底線裝飾 (對齊原站) */
+    .title-line {
+      width: 48px;
+      height: 3px;
+      background: var(--green);
+      border-radius: 2px;
+      margin-top: 16px;
+    }
+    .center .title-line { margin: 16px auto 0; }
+
+    /* ===== Buttons ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition);
+      border: 1.5px solid transparent;
+      font-family: var(--font);
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: var(--white);
+      border-color: var(--green);
+    }
+    .btn-green:hover {
+      background: var(--green-mint);
+      border-color: var(--green-mint);
+      color: var(--white);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(35, 164, 85, 0.25);
+    }
+
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--dark);
+      border-color: var(--dark);
+    }
+    .btn-outline-dark:hover {
+      background: var(--dark);
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+
+    .btn .arrow { transition: transform var(--transition); }
+    .btn:hover .arrow { transform: translateX(3px); }
+
+
+    /* ======================================
+       SECTION 1: HERO
+    ====================================== */
+    #hero {
+      background: var(--white);
+      padding: 100px 0 80px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(32px, 4.5vw, 52px);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 .green { color: var(--green); }
+
+    .hero-text .subtitle {
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.9;
+      margin-bottom: 32px;
+      max-width: 460px;
+    }
+
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Hero 右側：拼貼風格裝飾 (模仿原站) */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 400px;
+    }
+
+    .hero-collage {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 10px;
+      width: 420px;
+      height: 400px;
+    }
+
+    .collage-block {
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .collage-block.green-fill { background: var(--green-mint); }
+    .collage-block.green-light { background: var(--green-bg); }
+    .collage-block.gray-fill { background: var(--bg-light); }
+
+    .collage-block.span-2 { grid-column: span 2; }
+    .collage-block.row-2 { grid-row: span 2; }
+
+    /* 綠色圓形裝飾 */
+    .hero-visual .circle-deco {
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: var(--green-mint);
+      opacity: 0.12;
+      z-index: 0;
+    }
+    .hero-visual .circle-deco.top { top: -30px; right: -20px; }
+    .hero-visual .circle-deco.bottom { bottom: -40px; left: 10px; width: 180px; height: 180px; }
+
+    /* 綠色點陣裝飾 */
+    .dot-grid {
+      position: absolute;
+      display: grid;
+      grid-template-columns: repeat(6, 6px);
+      gap: 8px;
+      z-index: 1;
+    }
+    .dot-grid.top-right { top: 20px; right: -10px; }
+    .dot-grid.bottom-left { bottom: 30px; left: -20px; }
+    .dot-grid span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green-mint);
+      opacity: 0.5;
+    }
+
+
+    /* ======================================
+       SECTION 2: STATS
+    ====================================== */
+    #stats {
+      padding: 60px 0;
+      background: var(--white);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+
+    .stat-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+
+    .stat-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stat-icon svg {
+      width: 36px;
+      height: 36px;
+      stroke: var(--green-mint);
+      stroke-width: 1.5;
+      fill: none;
+    }
+
+    .stat-number {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(28px, 3vw, 38px);
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+
+    /* ======================================
+       SECTION 3: ABOUT
+    ====================================== */
+    #about {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .about-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-text p {
+      font-size: 15px;
+      color: var(--text-light);
+      margin-bottom: 20px;
+      line-height: 1.9;
+    }
+
+    .mission-box {
+      background: var(--green-bg);
+      border-left: 4px solid var(--green);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 24px 28px;
+      margin-top: 16px;
+    }
+
+    .mission-box h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+
+    .mission-box p {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* 右側圖片+裝飾 */
+    .about-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-img-placeholder {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: var(--bg-light);
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-img-placeholder .grenade-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 80px;
+      font-weight: 900;
+      color: var(--border);
+      letter-spacing: -3px;
+      user-select: none;
+    }
+
+    .about-visual .green-circle {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: var(--green-mint);
+      opacity: 0.15;
+      top: -30px;
+      right: -30px;
+      z-index: 0;
+    }
+
+    .about-visual .dot-pattern {
+      position: absolute;
+      bottom: -15px;
+      right: -15px;
+      display: grid;
+      grid-template-columns: repeat(5, 6px);
+      gap: 7px;
+      z-index: 2;
+    }
+    .about-visual .dot-pattern span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green-mint);
+    }
+
+
+    /* ======================================
+       SECTION 4: CONTENT AREAS
+    ====================================== */
+    #content-areas {
+      padding: 80px 0;
+      background: var(--bg-gray);
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .area-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      text-align: center;
+      transition: all var(--transition);
+    }
+
+    .area-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--green-mint);
+    }
+
+    .area-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .area-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke-width: 1.8;
+      fill: none;
+    }
+
+    .area-icon.blockchain { background: var(--green-bg); }
+    .area-icon.blockchain svg { stroke: var(--green); }
+
+    .area-icon.ai { background: #eef0ff; }
+    .area-icon.ai svg { stroke: #5B6AFF; }
+
+    .area-icon.invest { background: #fff7ee; }
+    .area-icon.invest svg { stroke: #E5940E; }
+
+    .area-icon.tools { background: #f0f4f8; }
+    .area-icon.tools svg { stroke: #5A6775; }
+
+    .area-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .area-card p {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+
+    /* ======================================
+       SECTION 5: SERVICES
+    ====================================== */
+    #services {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      transition: all var(--transition);
+    }
+
+    .service-card:hover {
+      border-color: var(--green-mint);
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+    }
+
+    .service-icon-area {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .service-icon-area svg,
+    .service-icon-area img {
+      max-width: 140px;
+      height: auto;
+    }
+
+    /* 服務編號 + 標題 */
+    .service-header {
+      margin-bottom: 14px;
+    }
+
+    .service-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--green);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .service-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--dark);
+      line-height: 1.4;
+    }
+
+    .service-card:hover h3 { color: var(--green); }
+
+    .service-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-card ul li {
+      font-size: 13px;
+      color: var(--text-light);
+      padding: 5px 0 5px 18px;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    .service-card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--green-mint);
+    }
+
+    /* 最後兩張卡置中 */
+    .services-grid-bottom {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 760px;
+      margin: 20px auto 0;
+    }
+
+
+    /* ======================================
+       SECTION 6: PROCESS
+    ====================================== */
+    #process {
+      padding: 80px 0;
+      background: var(--bg-gray);
+    }
+
+    .process-track {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      text-align: center;
+    }
+
+    .process-step {
+      padding: 0 8px;
+      position: relative;
+    }
+
+    .step-num {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(48px, 6vw, 72px);
+      font-weight: 900;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 12px;
+      transition: color var(--transition);
+    }
+
+    .process-step:hover .step-num {
+      color: var(--green-mint);
+    }
+
+    .step-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .step-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .step-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+
+    /* ======================================
+       SECTION 7: CTA
+    ====================================== */
+    #cta {
+      padding: 80px 0;
+      background: var(--green-mint);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #cta::before {
+      content: 'GRENADE';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(80px, 12vw, 160px);
+      font-weight: 900;
+      color: rgba(255,255,255,0.12);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    #cta .section-title {
+      color: var(--white);
+      position: relative;
+      z-index: 1;
+    }
+
+    #cta p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.9);
+      max-width: 480px;
+      margin: 0 auto 32px;
+      line-height: 1.8;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--dark);
+      border-color: var(--white);
+      position: relative;
+      z-index: 1;
+    }
+    .btn-white:hover {
+      background: var(--dark);
+      color: var(--white);
+      border-color: var(--dark);
+      transform: translateY(-1px);
+    }
+
+
+    /* ======================================
+       FOOTER
+    ====================================== */
+    #footer {
+      background: var(--dark-deep);
+      color: var(--text-muted);
+      padding: 60px 0 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-top: 16px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .footer-logo .logo-icon {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .footer-logo .logo-icon span {
+      width: 100%;
+      aspect-ratio: 1;
+      background: var(--green);
+      border-radius: 2px;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a {
+      font-size: 13px;
+      color: var(--text-muted);
+      transition: color var(--transition);
+    }
+    .footer-col ul li a:hover { color: var(--green-mint); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+    }
+
+
+    /* ======================================
+       RESPONSIVE
+    ====================================== */
+    @media (max-width: 1024px) {
+      .hero-row { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+      .about-row { grid-template-columns: 1fr; gap: 40px; }
+      .about-visual { order: -1; }
+      .areas-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid-bottom { grid-template-columns: 1fr; max-width: 380px; }
+      .process-track {
+        grid-template-columns: 1fr;
+        text-align: left;
+        gap: 24px;
+      }
+      .process-step {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 0;
+      }
+      .step-num {
+        font-size: 48px;
+        min-width: 60px;
+        margin: 0;
+      }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 768px) {
+      section, #about, #services, #content-areas, #process { padding: 60px 0; }
+      #hero { padding: 80px 0 60px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .areas-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .section-header { margin-bottom: 36px; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; justify-content: center; }
+    }
+
+
+    /* ===== Scroll Animation ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-row">
+        <div class="hero-text">
+          <h1>
+            <span class="green">Grenade</span> 手榴彈<br>
+            科技金融資訊的最後一里路
+          </h1>
+          <p class="subtitle">
+            從區塊鏈到 AI，從投資理財到前沿科技——我們用專業內容與整合服務，為品牌與讀者創造最大價值。
+          </p>
+          <div class="hero-actions">
+            <a href="#services" class="btn btn-green">瞭解我們的服務 <span class="arrow">→</span></a>
+            <a href="/contact-us/" class="btn btn-outline-dark">Contact Us</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="circle-deco top"></div>
+          <div class="circle-deco bottom"></div>
+          <div class="dot-grid top-right">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="hero-collage">
+            <div class="collage-block green-fill span-2" style="display:flex;align-items:center;justify-content:center;">
+              <span style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#fff;letter-spacing:-1px;">GRENADE</span>
+            </div>
+            <div class="collage-block gray-fill"></div>
+            <div class="collage-block gray-fill"></div>
+            <div class="collage-block green-light" style="display:flex;align-items:center;justify-content:center;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#23A455" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+            </div>
+            <div class="collage-block green-fill"></div>
+            <div class="collage-block green-light span-2" style="display:flex;align-items:center;justify-content:center;">
+              <span style="font-family:Inter,sans-serif;font-size:14px;font-weight:600;color:#23A455;">Key to the New World</span>
+            </div>
+            <div class="collage-block gray-fill"></div>
+          </div>
+          <div class="dot-grid bottom-left">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== STATS ========== -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card fade-up">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="stat-number">2,063</div>
+          <div class="stat-label">社群人數</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="stat-number">20</div>
+          <div class="stat-label">線上下活動</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+          </div>
+          <div class="stat-number">11</div>
+          <div class="stat-label">合作夥伴</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="6 8 10 12 14 9 18 13"/></svg>
+          </div>
+          <div class="stat-number">24</div>
+          <div class="stat-label">成功案例</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-row">
+        <div class="about-text">
+          <div class="section-header">
+            <h2 class="section-title">手榴彈</h2>
+            <div class="section-label">Grenade</div>
+            <div class="title-line"></div>
+          </div>
+          <p>Grenade 手榴彈成立於 2019 年，起初以區塊鏈產業資訊為核心，致力於消弭市場的資訊落差。隨著產業快速演進，我們的關注領域也持續擴展——從加密貨幣、DeFi、NFT，到人工智慧應用、金融科技、投資理財策略，Grenade 始終站在趨勢前沿，為讀者提供最即時、最深入的中文內容。</p>
+          <p>我們相信，好的資訊不只是報導，更是連結產業與大眾的橋樑。無論你是剛踏入幣圈的新手、關注 AI 工具的創作者，還是尋求市場洞察的投資人，Grenade 都是你探索新世界的起點。</p>
+          <p>「Key to the new world.」引爆最具影響力的熱門話題，即刻撼動科技金融社群，手榴彈陪你一塊擁抱新世界！</p>
+          <div class="mission-box">
+            <h3>我們的使命</h3>
+            <p>成為華語圈最值得信賴的科技金融資訊平台，用專業內容降低知識門檻，讓每個人都能掌握趨勢、做出明智決策。</p>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="green-circle"></div>
+          <div class="about-img-placeholder">
+            <span class="grenade-text">GRENADE</span>
+          </div>
+          <div class="dot-pattern">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CONTENT AREAS ========== -->
+  <section id="content-areas">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">我們涵蓋的領域</h2>
+        <p class="section-desc">從鏈上世界到鏈下生活，Grenade 的內容版圖持續擴張。</p>
+        <div class="title-line"></div>
+      </div>
+      <div class="areas-grid">
+        <div class="area-card fade-up">
+          <div class="area-icon blockchain">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="8" height="8" rx="1"/><rect x="15" y="1" width="8" height="8" rx="1"/><rect x="8" y="15" width="8" height="8" rx="1"/><line x1="5" y1="9" x2="5" y2="15"/><line x1="19" y1="9" x2="19" y2="15"/><line x1="9" y1="5" x2="15" y2="5"/><line x1="5" y1="15" x2="8" y2="19"/><line x1="19" y1="15" x2="16" y2="19"/></svg>
+          </div>
+          <h3>區塊鏈與加密貨幣</h3>
+          <p>比特幣、以太坊、DeFi、NFT、鏈遊到迷因幣——最完整的加密貨幣知識庫與市場分析，從入門教學到進階策略一應俱全。</p>
+        </div>
+        <div class="area-card fade-up">
+          <div class="area-icon ai">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M16 14h.01"/><path d="M8 14h.01"/><path d="M12 17v4"/><path d="M8 21h8"/><rect x="3" y="11" width="18" height="8" rx="3"/></svg>
+          </div>
+          <h3>人工智慧與科技趨勢</h3>
+          <p>AI 工具實測、應用教學與產業觀察。從 Grok、NotebookLM 到各類 AI Agent，幫你掌握最新科技脈動，提升工作與創作效率。</p>
+        </div>
+        <div class="area-card fade-up">
+          <div class="area-icon invest">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <h3>投資理財</h3>
+          <p>加密貨幣交易策略、交易所評比、金融卡比較、黃金與傳統資產配置——提供多元的理財資訊，協助你建立穩健的投資組合。</p>
+        </div>
+        <div class="area-card fade-up">
+          <div class="area-icon tools">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <h3>實用工具與安全防護</h3>
+          <p>錢包教學、詐騙辨識、VPN 推薦、LINE 機器人等實用資源，讓你在數位世界中安全又高效地操作。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">手榴彈服務</h2>
+        <div class="section-label">Grenade Service</div>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-header">
+            <span class="service-num">01. 媒體宣傳</span>
+            <h3>媒體公關與品牌曝光</h3>
+          </div>
+          <ul>
+            <li>品牌專欄與贊助內容合作（會員 / VIP）</li>
+            <li>網站廣告版位（Banner / 側欄 / 文章頁面）</li>
+            <li>Podcast（What the Block｜區塊夜未眠）</li>
+            <li>科技金融領域媒體聯播與新聞稿發佈</li>
+          </ul>
+        </div>
+
+        <div class="service-card fade-up">
+          <div class="service-header">
+            <span class="service-num">02. 活動策劃</span>
+            <h3>活動企劃與執行</h3>
+          </div>
+          <ul>
+            <li>線上活動：Airdrop / AMA / 線上直播</li>
+            <li>線下活動：產品發表會 / Meetup / 主題講座</li>
+            <li>跨界合作活動策劃與落地執行</li>
+          </ul>
+        </div>
+
+        <div class="service-card fade-up">
+          <div class="service-header">
+            <span class="service-num">03. 社群經營</span>
+            <h3>社群經營與 KOL 合作</h3>
+          </div>
+          <ul>
+            <li>社群 AMA 策劃與群組建立</li>
+            <li>KOL / 意見領袖媒合與推廣</li>
+            <li>策略建議暨指導</li>
+            <li>社群平台代營運</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="services-grid-bottom">
+        <div class="service-card fade-up">
+          <div class="service-header">
+            <span class="service-num">04. 顧問服務</span>
+            <h3>顧問諮詢</h3>
+          </div>
+          <ul>
+            <li>人才招募與戰略資源媒合</li>
+            <li>品牌發展策略規劃</li>
+            <li>行銷節奏規劃與成效優化</li>
+            <li>活動規劃與關係維護</li>
+          </ul>
+        </div>
+
+        <div class="service-card fade-up">
+          <div class="service-header">
+            <span class="service-num">05. 品牌內容</span>
+            <h3>內容製作與創意設計</h3>
+          </div>
+          <ul>
+            <li>圖文懶人包製作</li>
+            <li>新聞稿撰寫 / 深度內容專題</li>
+            <li>影片製作、音頻業配寫</li>
+            <li>多語言翻譯與在地化內容</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== PROCESS ========== -->
+  <section id="process">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">手榴彈服務流程</h2>
+        <div class="section-label">Grenade Process</div>
+        <div class="title-line"></div>
+      </div>
+      <div class="process-track">
+        <div class="process-step fade-up">
+          <div class="step-num">01</div>
+          <div>
+            <div class="step-title">STEP 01. 聆聽需求</div>
+            <div class="step-desc">了解品牌目標、受眾輪廓與行業趨勢，釐清合作方向。</div>
+          </div>
+        </div>
+        <div class="process-step fade-up">
+          <div class="step-num">02</div>
+          <div>
+            <div class="step-title">STEP 02. 發展策略</div>
+            <div class="step-desc">為品牌制定推廣方向、行銷策略與執行時程。</div>
+          </div>
+        </div>
+        <div class="process-step fade-up">
+          <div class="step-num">03</div>
+          <div>
+            <div class="step-title">STEP 03. 執行測試</div>
+            <div class="step-desc">運行規劃內容，測試效果、提升互動。</div>
+          </div>
+        </div>
+        <div class="process-step fade-up">
+          <div class="step-num">04</div>
+          <div>
+            <div class="step-title">STEP 04. 放大聲量</div>
+            <div class="step-desc">提升市場討論度、關注度，迎合受眾。</div>
+          </div>
+        </div>
+        <div class="process-step fade-up">
+          <div class="step-num">05</div>
+          <div>
+            <div class="step-title">STEP 05. 分析覆盤</div>
+            <div class="step-desc">回顧表現，檢視數據資料、搜集可實現的洞見。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CTA ========== -->
+  <section id="cta">
+    <div class="container">
+      <h2 class="section-title">準備好開始了嗎？</h2>
+      <p>無論你是品牌方尋求曝光，還是專案方需要整合行銷，歡迎與 Grenade 團隊聊聊。</p>
+      <a href="/contact-us/" class="btn btn-white">Contact Us <span class="arrow">→</span></a>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </div>
+            GRENADE
+          </div>
+          <p>我們深耕科技金融領域，擁有最活躍的社群，<br>提供一站式整合服務。</p>
+        </div>
+        <div class="footer-col">
+          <h4>Grenade</h4>
+          <ul>
+            <li><a href="/about-us/">關於我們</a></li>
+            <li><a href="/contact-us/">聯絡我們</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>資訊</h4>
+          <ul>
+            <li><a href="#">新手教學</a></li>
+            <li><a href="#">加密卡</a></li>
+            <li><a href="#">交易所</a></li>
+            <li><a href="#">AI</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 Grenade. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ===== Scroll Animation ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, i * 80);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>
