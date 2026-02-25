@@ -173,55 +173,7 @@
       max-width: 480px;
     }
 
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
-
-    /* Hero Stats */
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      max-width: 480px;
-    }
-
-    .hero-stat {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 0;
-    }
-
-    .hero-stat-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: var(--green-bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .hero-stat-icon svg {
-      width: 20px;
-      height: 20px;
-      stroke: var(--green);
-      stroke-width: 1.8;
-      fill: none;
-    }
-
-    .hero-stat-num {
-      font-family: 'Inter', sans-serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--dark);
-      line-height: 1.2;
-    }
-
-    .hero-stat-label {
-      font-size: 12px;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
     /* Hero Visual */
     .hero-visual {
@@ -532,50 +484,6 @@
       background: var(--bg-gray);
     }
 
-    .track-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-bottom: 56px;
-    }
-
-    .track-stat-card {
-      text-align: center;
-      padding: 40px 24px;
-      background: var(--white);
-      border-radius: 16px;
-      border: 1px solid rgba(0,0,0,0.04);
-      transition: all 0.4s ease;
-    }
-
-    .track-stat-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(35, 164, 85, 0.08);
-    }
-
-    .track-stat-num {
-      font-family: 'Inter', sans-serif;
-      font-size: clamp(32px, 3.5vw, 42px);
-      font-weight: 700;
-      color: var(--green);
-      line-height: 1.2;
-      margin-bottom: 8px;
-    }
-
-    .track-stat-label {
-      font-size: 15px;
-      color: var(--text);
-      line-height: 1.6;
-      font-weight: 500;
-    }
-
-    .track-stat-example {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 8px;
-      line-height: 1.5;
-    }
-
     /* Testimonial */
     .testimonial {
       max-width: 720px;
@@ -771,25 +679,157 @@
 
 
     /* ======================================
+       CONTENT AREAS (我們涵蓋的領域)
+    ====================================== */
+    #content-areas {
+      padding: 80px 0;
+      background: var(--bg-gray);
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .area-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      text-align: center;
+      transition: all var(--transition);
+    }
+
+    .area-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--green-mint);
+    }
+
+    .area-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .area-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke-width: 1.8;
+      fill: none;
+    }
+
+    .area-icon.blockchain { background: var(--green-bg); }
+    .area-icon.blockchain svg { stroke: var(--green); }
+
+    .area-icon.ai { background: #eef0ff; }
+    .area-icon.ai svg { stroke: #5B6AFF; }
+
+    .area-icon.invest { background: #fff7ee; }
+    .area-icon.invest svg { stroke: #E5940E; }
+
+    .area-icon.tools { background: #f0f4f8; }
+    .area-icon.tools svg { stroke: #5A6775; }
+
+    .area-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .area-card p {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+
+    /* ======================================
+       STATS (數據區塊)
+    ====================================== */
+    #stats {
+      padding: 60px 0;
+      background: var(--white);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+
+    .stat-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+
+    .stat-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stat-icon svg {
+      width: 36px;
+      height: 36px;
+      stroke: var(--green-mint);
+      stroke-width: 1.5;
+      fill: none;
+    }
+
+    .stat-number {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(28px, 3vw, 38px);
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+
+    /* ======================================
        RESPONSIVE
     ====================================== */
     @media (max-width: 1024px) {
       .hero-row { grid-template-columns: 1fr; gap: 40px; }
       .hero-visual { display: none; }
-      .hero-stats { max-width: 100%; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .areas-grid { grid-template-columns: repeat(2, 1fr); }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .process-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
-      .track-stats { grid-template-columns: repeat(3, 1fr); }
     }
 
     @media (max-width: 768px) {
       #hero { padding: 80px 0 60px; }
       section { padding: 60px 0; }
-      .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .areas-grid { grid-template-columns: 1fr; }
       .services-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
       .service-card { padding: 36px 28px 32px; }
       .process-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-      .track-stats { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 56px; }
       .section-header { margin-bottom: 40px; }
       .partner-logos { gap: 12px; }
       .partner-logo { min-width: 100px; padding: 12px 20px; height: 56px; }
@@ -799,7 +839,7 @@
 
     @media (max-width: 480px) {
       .container { padding: 0 16px; }
-      .hero-stats { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
       .hero-actions { flex-direction: column; }
       .btn { width: 100%; justify-content: center; }
       .process-grid { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
@@ -839,44 +879,6 @@
             <a href="#" class="btn btn-green">立即免費 15 分鐘策略諮詢 <span class="arrow">→</span></a>
             <a href="#" class="btn btn-outline-dark">Contact Us</a>
           </div>
-          <div class="hero-stats">
-            <div class="hero-stat fade-up">
-              <div class="hero-stat-icon">
-                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-              </div>
-              <div>
-                <div class="hero-stat-num">500+</div>
-                <div class="hero-stat-label">成功案例</div>
-              </div>
-            </div>
-            <div class="hero-stat fade-up">
-              <div class="hero-stat-icon">
-                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
-              </div>
-              <div>
-                <div class="hero-stat-num">200+</div>
-                <div class="hero-stat-label">知名項目與夥伴</div>
-              </div>
-            </div>
-            <div class="hero-stat fade-up">
-              <div class="hero-stat-icon">
-                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              </div>
-              <div>
-                <div class="hero-stat-num">250+</div>
-                <div class="hero-stat-label">場線上/線下活動</div>
-              </div>
-            </div>
-            <div class="hero-stat fade-up">
-              <div class="hero-stat-icon">
-                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <div>
-                <div class="hero-stat-num">65,000+</div>
-                <div class="hero-stat-label">華語社群活躍用戶</div>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="hero-visual">
           <div class="circle-deco top"></div>
@@ -912,14 +914,93 @@
   </section>
 
 
+  <!-- ========== STATS ========== -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card fade-up">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <div class="stat-number">500+</div>
+          <div class="stat-label">成功案例</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+          </div>
+          <div class="stat-number">200+</div>
+          <div class="stat-label">知名項目與夥伴</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="stat-number">250+</div>
+          <div class="stat-label">場線上/線下活動</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="stat-number">65,000+</div>
+          <div class="stat-label">華語社群活躍用戶</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ========== INTRO ========== -->
   <section id="intro">
     <div class="container">
       <div class="intro-inner fade-up">
-        <div class="section-label">ABOUT OUR SERVICES</div>
-        <h2 class="section-title">關於我們的服務</h2>
+        <h2 class="section-title">關於我們</h2>
+        <div class="section-label">About Grenade</div>
         <div class="title-line" style="margin: 16px auto 24px;"></div>
         <p>Grenade 手榴彈從 2019 年深耕區塊鏈社群起步，如今已成為華語科技金融領域最具影響力的內容與品牌服務提供者。我們將累積的社群資源、媒體關係與執行經驗，轉化為一站式品牌整合服務，幫助新項目、交易所、AI/Web3 品牌解決「華語圈曝光難、信任建立慢、轉換率低」的痛點。</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CONTENT AREAS ========== -->
+  <section id="content-areas">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">我們涵蓋的領域</h2>
+        <p class="section-desc">從鏈上世界到鏈下生活，Grenade 的內容版圖持續擴張。</p>
+        <div class="title-line"></div>
+      </div>
+      <div class="areas-grid">
+        <div class="area-card fade-up">
+          <div class="area-icon blockchain">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="8" height="8" rx="1"/><rect x="15" y="1" width="8" height="8" rx="1"/><rect x="8" y="15" width="8" height="8" rx="1"/><line x1="5" y1="9" x2="5" y2="15"/><line x1="19" y1="9" x2="19" y2="15"/><line x1="9" y1="5" x2="15" y2="5"/><line x1="5" y1="15" x2="8" y2="19"/><line x1="19" y1="15" x2="16" y2="19"/></svg>
+          </div>
+          <h3>區塊鏈與加密貨幣</h3>
+          <p>比特幣、以太坊、DeFi、NFT、鏈遊到迷因幣——最完整的加密貨幣知識庫與市場分析，從入門教學到進階策略一應俱全。</p>
+        </div>
+        <div class="area-card fade-up">
+          <div class="area-icon ai">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M16 14h.01"/><path d="M8 14h.01"/><path d="M12 17v4"/><path d="M8 21h8"/><rect x="3" y="11" width="18" height="8" rx="3"/></svg>
+          </div>
+          <h3>人工智慧與科技趨勢</h3>
+          <p>AI 工具實測、應用教學與產業觀察。從 Grok、NotebookLM 到各類 AI Agent，幫你掌握最新科技脈動，提升工作與創作效率。</p>
+        </div>
+        <div class="area-card fade-up">
+          <div class="area-icon invest">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <h3>投資理財</h3>
+          <p>加密貨幣交易策略、交易所評比、金融卡比較、黃金與傳統資產配置——提供多元的理財資訊，協助你建立穩健的投資組合。</p>
+        </div>
+        <div class="area-card fade-up">
+          <div class="area-icon tools">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <h3>實用工具與安全防護</h3>
+          <p>錢包教學、詐騙辨識、VPN 推薦、LINE 機器人等實用資源，讓你在數位世界中安全又高效地操作。</p>
+        </div>
       </div>
     </div>
   </section>
@@ -929,8 +1010,8 @@
   <section id="services">
     <div class="container">
       <div class="section-header center">
-        <p class="section-label">Grenade Service</p>
         <h2 class="section-title">手榴彈服務</h2>
+        <div class="section-label">Grenade Service</div>
         <div class="title-line"></div>
       </div>
 
@@ -1071,26 +1152,9 @@
   <section id="track-record">
     <div class="container">
       <div class="section-header center">
-        <div class="section-label">TRACK RECORD</div>
         <h2 class="section-title">我們的成績單</h2>
+        <div class="section-label">Track Record</div>
         <div class="title-line"></div>
-      </div>
-
-      <div class="track-stats">
-        <div class="track-stat-card fade-up">
-          <div class="track-stat-num">250,000+</div>
-          <div class="track-stat-label">社群總觸及華語用戶</div>
-        </div>
-        <div class="track-stat-card fade-up">
-          <div class="track-stat-num">24+</div>
-          <div class="track-stat-label">成功案例</div>
-          <div class="track-stat-example">例：某中型交易所 AMA 活動 → 觸及 50 萬人、報名轉化率 15%</div>
-        </div>
-        <div class="track-stat-card fade-up">
-          <div class="track-stat-num">11+</div>
-          <div class="track-stat-label">合作夥伴</div>
-          <div class="track-stat-example">國際知名交易所、頂尖 AI 項目等</div>
-        </div>
       </div>
 
       <div class="testimonial fade-up">
