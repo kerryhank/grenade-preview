@@ -310,7 +310,7 @@
 
 
     /* ======================================
-       SECTION 3: SERVICES
+       SECTION 3: SERVICES (原站風格)
     ====================================== */
     #services {
       padding: 80px 0;
@@ -319,53 +319,73 @@
 
     .services-grid {
       display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px 20px;
+    }
+
+    .services-grid-bottom {
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      gap: 40px 20px;
+      max-width: 66.66%;
+      margin: 40px auto 0;
     }
 
     .service-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 36px 32px;
+      text-align: center;
+      padding: 0 16px;
       transition: all var(--transition);
     }
 
     .service-card:hover {
-      border-color: var(--green-mint);
-      box-shadow: var(--shadow);
       transform: translateY(-3px);
     }
 
-    .service-header {
-      margin-bottom: 16px;
+    .service-icon {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .service-num {
-      font-family: 'Inter', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--green);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 6px;
+    .service-icon svg {
+      width: 100px;
+      height: 100px;
+      stroke: var(--green);
+      stroke-width: 1.2;
+      fill: none;
     }
 
     .service-card h3 {
+      font-family: 'Roboto', 'Noto Sans TC', sans-serif;
       font-size: 18px;
       font-weight: 600;
       color: var(--dark);
-      line-height: 1.4;
+      letter-spacing: 1.4px;
+      margin-bottom: 16px;
     }
 
     .service-card:hover h3 { color: var(--green); }
 
-    .service-card .service-desc {
+    .service-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--green-mint);
+      margin: 0 auto 20px;
+    }
+
+    .service-card .service-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .service-card .service-list li {
       font-size: 14px;
       color: var(--text-light);
-      line-height: 1.8;
-      margin-bottom: 16px;
+      line-height: 2;
     }
 
     .service-tag {
@@ -376,98 +396,68 @@
       padding: 4px 12px;
       border-radius: 20px;
       font-weight: 500;
+      margin-top: 12px;
     }
 
 
     /* ======================================
-       SECTION 4: PROCESS
+       SECTION 4: PROCESS (原站風格 - 大數字)
     ====================================== */
     #process {
       padding: 80px 0;
-      background: var(--bg-gray);
+      background: var(--white);
     }
 
-    /* 水平時間軸 */
-    .process-timeline {
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-      padding: 0 10px;
-    }
-
-    /* 連接線 */
-    .process-timeline::before {
-      content: '';
-      position: absolute;
-      top: 24px;
-      left: 40px;
-      right: 40px;
-      height: 2px;
-      background: var(--border);
-      z-index: 0;
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
     }
 
     .process-step {
       text-align: center;
-      flex: 1;
-      position: relative;
-      z-index: 1;
       padding: 0 8px;
     }
 
-    .step-dot {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--white);
-      border: 3px solid var(--green);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-      transition: all var(--transition);
-    }
-
-    .step-dot span {
+    .step-big-num {
       font-family: 'Inter', sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--green);
+      font-size: clamp(72px, 8vw, 100px);
+      font-weight: 900;
+      color: var(--green-mint);
+      opacity: 0.25;
+      line-height: 1;
+      margin-bottom: 12px;
+      letter-spacing: -2px;
     }
 
-    .process-step:hover .step-dot {
-      background: var(--green);
-    }
-    .process-step:hover .step-dot span {
-      color: var(--white);
-    }
-
-    .step-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 4px;
-    }
-
-    .step-time {
-      font-size: 12px;
-      color: var(--green);
+    .step-label {
+      font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+      font-size: 18px;
       font-weight: 500;
-      margin-bottom: 8px;
+      color: var(--dark);
+      letter-spacing: 1.4px;
+      margin-bottom: 16px;
+    }
+
+    .step-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--green-mint);
+      margin: 0 auto 16px;
     }
 
     .step-desc {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.6;
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.9;
     }
 
     .process-note {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 48px;
       font-size: 14px;
       color: var(--text-light);
-      background: var(--white);
+      background: var(--bg-gray);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 16px 24px;
@@ -567,20 +557,29 @@
     }
 
     .partner-logo {
-      font-family: 'Inter', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 12px 24px;
       background: var(--bg-gray);
       border-radius: 8px;
       border: 1px solid var(--border);
       transition: all var(--transition);
+      height: 56px;
+      color: var(--text-muted);
+    }
+
+    .partner-logo svg {
+      opacity: 0.45;
+      transition: all var(--transition);
     }
 
     .partner-logo:hover {
       border-color: var(--green-mint);
-      color: var(--dark);
+    }
+
+    .partner-logo:hover svg {
+      opacity: 0.85;
     }
 
 
@@ -700,29 +699,8 @@
       .hero-visual { display: none; }
       .hero-stats { max-width: 100%; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .process-timeline {
-        flex-direction: column;
-        gap: 24px;
-        align-items: flex-start;
-      }
-      .process-timeline::before {
-        top: 0;
-        bottom: 0;
-        left: 23px;
-        right: auto;
-        width: 2px;
-        height: auto;
-      }
-      .process-step {
-        display: flex;
-        gap: 20px;
-        align-items: flex-start;
-        text-align: left;
-      }
-      .step-dot {
-        margin: 0;
-        flex-shrink: 0;
-      }
+      .services-grid-bottom { max-width: 100%; grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
       .track-stats { grid-template-columns: repeat(3, 1fr); }
     }
 
@@ -731,6 +709,8 @@
       section { padding: 60px 0; }
       .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
       .services-grid { grid-template-columns: 1fr; }
+      .services-grid-bottom { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
       .track-stats { grid-template-columns: 1fr; }
       .section-header { margin-bottom: 36px; }
       .partner-logos { gap: 16px; }
@@ -742,7 +722,9 @@
       .hero-stats { grid-template-columns: 1fr; }
       .hero-actions { flex-direction: column; }
       .btn { width: 100%; justify-content: center; }
-      .partner-logo { font-size: 14px; padding: 10px 16px; }
+      .process-grid { grid-template-columns: 1fr; }
+      .partner-logo { padding: 10px 16px; }
+      .partner-logo img { max-height: 22px; }
     }
 
 
@@ -863,49 +845,82 @@
   </section>
 
 
-  <!-- ========== SERVICES ========== -->
+  <!-- ========== SERVICES (原站風格) ========== -->
   <section id="services">
     <div class="container">
       <div class="section-header center">
-        <div class="section-label">GRENADE SERVICES</div>
+        <p class="section-label" style="color:var(--text-muted);font-size:14px;margin-bottom:4px;">Grenade Service</p>
         <h2 class="section-title">手榴彈服務</h2>
         <div class="title-line"></div>
       </div>
 
+      <!-- 上排 3 張 -->
       <div class="services-grid">
         <div class="service-card fade-up">
-          <div class="service-header">
-            <span class="service-num">01</span>
-            <h3>官網內容與 SEO 曝光</h3>
+          <div class="service-icon">
+            <svg viewBox="0 0 100 100" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="50" cy="40" r="22"/><path d="M30 75 Q50 60 70 75"/><line x1="50" y1="18" x2="50" y2="8"/><line x1="65" y1="22" x2="72" y2="15"/><line x1="35" y1="22" x2="28" y2="15"/>
+            </svg>
           </div>
-          <p class="service-desc">專業中文 SEO 文章撰寫 + 官網廣告投放，提升自然排名與品牌曝光。</p>
+          <h3>01. 官網內容與 SEO 曝光</h3>
+          <div class="service-divider"></div>
+          <ul class="service-list">
+            <li>專業中文 SEO 文章撰寫</li>
+            <li>官網廣告投放</li>
+            <li>提升自然排名與品牌曝光</li>
+          </ul>
           <span class="service-tag">適合：新項目上線、長期聲量建立</span>
         </div>
 
         <div class="service-card fade-up">
-          <div class="service-header">
-            <span class="service-num">02</span>
-            <h3>多平台社群內容與廣告</h3>
+          <div class="service-icon">
+            <svg viewBox="0 0 100 100" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="15" y="25" width="70" height="50" rx="4"/><circle cx="50" cy="50" r="12"/><polygon points="46,44 58,50 46,56"/>
+            </svg>
           </div>
-          <p class="service-desc">客製社群媒體圖文、影片、討論內容 + 社群廣告投放，可導流至私有社群深度互動。</p>
+          <h3>02. 多平台社群內容與廣告</h3>
+          <div class="service-divider"></div>
+          <ul class="service-list">
+            <li>客製社群媒體圖文、影片</li>
+            <li>社群廣告投放</li>
+            <li>導流至私有社群深度互動</li>
+          </ul>
           <span class="service-tag">適合：日常運營、病毒內容、跨平台觸及</span>
         </div>
 
         <div class="service-card fade-up">
-          <div class="service-header">
-            <span class="service-num">03</span>
-            <h3>活動策劃與執行</h3>
+          <div class="service-icon">
+            <svg viewBox="0 0 100 100" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="20" y="30" width="60" height="40" rx="3"/><line x1="20" y1="45" x2="80" y2="45"/><circle cx="35" cy="38" r="3" fill="var(--green)" stroke="none"/><circle cx="45" cy="38" r="3" fill="var(--green-mint)" stroke="none"/><path d="M30 60 L45 52 L55 58 L70 48"/>
+            </svg>
           </div>
-          <p class="service-desc">線上/線下活動規劃（產品上線 AMA、台灣市場進入推廣、節慶企劃），可透過私有社群預熱、招募與後續討論。</p>
+          <h3>03. 活動策劃與執行</h3>
+          <div class="service-divider"></div>
+          <ul class="service-list">
+            <li>線上活動（AMA / 線上直播）</li>
+            <li>線下活動（Meetup / 教學講座）</li>
+            <li>私有社群預熱、招募與討論</li>
+          </ul>
           <span class="service-tag">適合：用戶拉新、媒體討論、品牌落地</span>
         </div>
+      </div>
 
+      <!-- 下排 1 張置中 -->
+      <div class="services-grid-bottom">
         <div class="service-card fade-up">
-          <div class="service-header">
-            <span class="service-num">04</span>
-            <h3>市場進入策略顧問</h3>
+          <div class="service-icon">
+            <svg viewBox="0 0 100 100" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M50 20 L50 50 L70 60"/><circle cx="50" cy="50" r="30"/><path d="M25 75 Q50 85 75 75"/>
+            </svg>
           </div>
-          <p class="service-desc">台灣/華語圈 KOL 與合作夥伴資源媒合 + 客製顧問，結合私有社群洞察加速落地與信任建立。</p>
+          <h3>04. 市場進入策略顧問</h3>
+          <div class="service-divider"></div>
+          <ul class="service-list">
+            <li>台灣/華語圈 KOL 資源媒合</li>
+            <li>合作夥伴資源連結</li>
+            <li>客製顧問 + 私有社群洞察</li>
+            <li>加速落地與信任建立</li>
+          </ul>
           <span class="service-tag">適合：國際項目進軍華語市場、資源連結</span>
         </div>
       </div>
@@ -913,56 +928,52 @@
   </section>
 
 
-  <!-- ========== PROCESS ========== -->
+  <!-- ========== PROCESS (原站風格 - 大數字) ========== -->
   <section id="process">
     <div class="container">
       <div class="section-header center">
-        <div class="section-label">GRENADE PROCESS</div>
+        <p class="section-label" style="color:var(--text-muted);font-size:14px;margin-bottom:4px;">Grenade Process</p>
         <h2 class="section-title">手榴彈服務流程</h2>
         <div class="title-line"></div>
       </div>
-      <div class="process-timeline">
+
+      <div class="process-grid">
         <div class="process-step fade-up">
-          <div class="step-dot"><span>1</span></div>
-          <div>
-            <div class="step-title">對齊需求</div>
-            <div class="step-time">1-2 週</div>
-            <div class="step-desc">深度訪談 + 了解客戶需求</div>
-          </div>
+          <div class="step-big-num">01</div>
+          <div class="step-label">STEP 01. 對齊需求</div>
+          <div class="step-divider"></div>
+          <div class="step-desc">深度訪談 + 了解客戶需求、背景與行業趨勢（1-2 週）</div>
         </div>
+
         <div class="process-step fade-up">
-          <div class="step-dot"><span>2</span></div>
-          <div>
-            <div class="step-title">策略規劃</div>
-            <div class="step-time">&nbsp;</div>
-            <div class="step-desc">根據你的目標與預算，制定專屬內容、社群與增長策略</div>
-          </div>
+          <div class="step-big-num">02</div>
+          <div class="step-label">STEP 02. 策略規劃</div>
+          <div class="step-divider"></div>
+          <div class="step-desc">根據目標與預算，制定專屬內容、社群與增長策略</div>
         </div>
+
         <div class="process-step fade-up">
-          <div class="step-dot"><span>3</span></div>
-          <div>
-            <div class="step-title">執行測試</div>
-            <div class="step-time">&nbsp;</div>
-            <div class="step-desc">小規模先跑內容（官網文章、社群貼文、廣告），快速驗證效果並提供數據報告 + 優化建議</div>
-          </div>
+          <div class="step-big-num">03</div>
+          <div class="step-label">STEP 03. 執行測試</div>
+          <div class="step-divider"></div>
+          <div class="step-desc">小規模先跑內容，快速驗證效果並提供數據報告 + 優化建議</div>
         </div>
+
         <div class="process-step fade-up">
-          <div class="step-dot"><span>4</span></div>
-          <div>
-            <div class="step-title">放大聲量</div>
-            <div class="step-time">&nbsp;</div>
-            <div class="step-desc">正式投放多渠道（媒體、社群廣告、活動、私有社群導流），引爆華語圈影響力</div>
-          </div>
+          <div class="step-big-num">04</div>
+          <div class="step-label">STEP 04. 放大聲量</div>
+          <div class="step-divider"></div>
+          <div class="step-desc">正式投放多渠道（媒體、社群、活動），引爆華語圈影響力</div>
         </div>
+
         <div class="process-step fade-up">
-          <div class="step-dot"><span>5</span></div>
-          <div>
-            <div class="step-title">分析覆盤</div>
-            <div class="step-time">&nbsp;</div>
-            <div class="step-desc">完整數據報告 + 下階段優化建議，讓每輪合作更精準</div>
-          </div>
+          <div class="step-big-num">05</div>
+          <div class="step-label">STEP 05. 分析覆盤</div>
+          <div class="step-divider"></div>
+          <div class="step-desc">完整數據報告 + 下階段優化建議，讓每輪合作更精準</div>
         </div>
       </div>
+
       <div class="process-note fade-up">
         完整一輪合作通常需 4-12 週，我們採用敏捷式執行，每 1-2 週與您同步進度與數據。
       </div>
@@ -1004,11 +1015,37 @@
       <div class="partners fade-up">
         <div class="partners-label">合作夥伴</div>
         <div class="partner-logos">
-          <div class="partner-logo">Binance 幣安</div>
-          <div class="partner-logo">OKX</div>
-          <div class="partner-logo">Bybit</div>
-          <div class="partner-logo">Kraken</div>
-          <div class="partner-logo">Backpack</div>
+          <!-- Binance -->
+          <div class="partner-logo">
+            <svg width="120" height="24" viewBox="0 0 120 24" fill="currentColor">
+              <path d="M7.2 9.6L12 4.8l4.8 4.8-2.8 2.8L12 10.4l-2 2-2.8-2.8zM0 12l2.8-2.8L5.6 12l-2.8 2.8L0 12zm12 0l2.8-2.8L17.6 12l-2.8 2.8L12 12zm7.2 0l2.8-2.8 2.8 2.8-2.8 2.8-2.8-2.8zM12 13.6l2 2 2.8-2.8 2.8 2.8L12 23.2 4.4 15.6l2.8-2.8 2 2L12 13.6z"/>
+              <text x="30" y="17" font-family="Inter,sans-serif" font-size="14" font-weight="600" letter-spacing="1">BINANCE</text>
+            </svg>
+          </div>
+          <!-- OKX -->
+          <div class="partner-logo">
+            <svg width="60" height="24" viewBox="0 0 60 24" fill="currentColor">
+              <text x="0" y="17" font-family="Inter,sans-serif" font-size="18" font-weight="700" letter-spacing="2">OKX</text>
+            </svg>
+          </div>
+          <!-- Bybit -->
+          <div class="partner-logo">
+            <svg width="70" height="24" viewBox="0 0 70 24" fill="currentColor">
+              <text x="0" y="17" font-family="Inter,sans-serif" font-size="16" font-weight="600" letter-spacing="0.5">Bybit</text>
+            </svg>
+          </div>
+          <!-- Kraken -->
+          <div class="partner-logo">
+            <svg width="80" height="24" viewBox="0 0 80 24" fill="currentColor">
+              <text x="0" y="17" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="1">KRAKEN</text>
+            </svg>
+          </div>
+          <!-- Backpack -->
+          <div class="partner-logo">
+            <svg width="100" height="24" viewBox="0 0 100 24" fill="currentColor">
+              <text x="0" y="17" font-family="Inter,sans-serif" font-size="14" font-weight="600" letter-spacing="0.5">Backpack</text>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
