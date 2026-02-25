@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>關於 Grenade 手榴彈｜科技金融資訊平台與品牌整合服務</title>
-  <meta name="description" content="Grenade 手榴彈 — 從區塊鏈到 AI，從投資理財到前沿科技，我們用專業內容與整合服務，為品牌與讀者創造最大價值。">
+  <title>Grenade 手榴彈｜華語科技金融品牌整合行銷服務</title>
+  <meta name="description" content="Grenade 手榴彈｜華語科技金融品牌整合行銷專家，提供一站式服務：媒體公關、社群經營、活動策劃、KOL 媒合。從 Web3 到 AI，助項目方快速提升曝光與成長。免費 15 分鐘策略諮詢。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
@@ -86,7 +86,6 @@
     .section-header.center { text-align: center; }
     .section-header.center .section-desc { margin: 0 auto; }
 
-    /* 標題底線裝飾 (對齊原站) */
     .title-line {
       width: 48px;
       height: 3px;
@@ -101,7 +100,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 12px 28px;
+      padding: 14px 32px;
       border-radius: 6px;
       font-size: 15px;
       font-weight: 500;
@@ -144,7 +143,7 @@
     ====================================== */
     #hero {
       background: var(--white);
-      padding: 100px 0 80px;
+      padding: 100px 0 60px;
       overflow: hidden;
       position: relative;
     }
@@ -157,9 +156,9 @@
     }
 
     .hero-text h1 {
-      font-size: clamp(32px, 4.5vw, 52px);
+      font-size: clamp(30px, 4vw, 48px);
       font-weight: 700;
-      line-height: 1.2;
+      line-height: 1.25;
       color: var(--dark);
       margin-bottom: 20px;
     }
@@ -171,12 +170,60 @@
       color: var(--text-light);
       line-height: 1.9;
       margin-bottom: 32px;
-      max-width: 460px;
+      max-width: 480px;
     }
 
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
 
-    /* Hero 右側：拼貼風格裝飾 (模仿原站) */
+    /* Hero Stats */
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 480px;
+    }
+
+    .hero-stat {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+    }
+
+    .hero-stat-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--green-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .hero-stat-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--green);
+      stroke-width: 1.8;
+      fill: none;
+    }
+
+    .hero-stat-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    .hero-stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Hero Visual */
     .hero-visual {
       position: relative;
       display: flex;
@@ -203,11 +250,8 @@
     .collage-block.green-fill { background: var(--green-mint); }
     .collage-block.green-light { background: var(--green-bg); }
     .collage-block.gray-fill { background: var(--bg-light); }
-
     .collage-block.span-2 { grid-column: span 2; }
-    .collage-block.row-2 { grid-row: span 2; }
 
-    /* 綠色圓形裝飾 */
     .hero-visual .circle-deco {
       position: absolute;
       width: 260px;
@@ -220,7 +264,6 @@
     .hero-visual .circle-deco.top { top: -30px; right: -20px; }
     .hero-visual .circle-deco.bottom { bottom: -40px; left: 10px; width: 180px; height: 180px; }
 
-    /* 綠色點陣裝飾 */
     .dot-grid {
       position: absolute;
       display: grid;
@@ -240,241 +283,34 @@
 
 
     /* ======================================
-       SECTION 2: STATS
+       SECTION 2: INTRO (簡短介紹)
     ====================================== */
-    #stats {
+    #intro {
       padding: 60px 0;
-      background: var(--white);
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .stat-card {
-      text-align: center;
-      padding: 32px 20px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      transition: all var(--transition);
-    }
-
-    .stat-card:hover {
-      box-shadow: var(--shadow);
-      transform: translateY(-2px);
-    }
-
-    .stat-icon {
-      width: 48px;
-      height: 48px;
-      margin: 0 auto 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .stat-icon svg {
-      width: 36px;
-      height: 36px;
-      stroke: var(--green-mint);
-      stroke-width: 1.5;
-      fill: none;
-    }
-
-    .stat-number {
-      font-family: 'Inter', sans-serif;
-      font-size: clamp(28px, 3vw, 38px);
-      font-weight: 700;
-      color: var(--dark);
-      line-height: 1.2;
-    }
-
-    .stat-label {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-
-
-    /* ======================================
-       SECTION 3: ABOUT
-    ====================================== */
-    #about {
-      padding: 80px 0;
-      background: var(--white);
-    }
-
-    .about-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
-
-    .about-text p {
-      font-size: 15px;
-      color: var(--text-light);
-      margin-bottom: 20px;
-      line-height: 1.9;
-    }
-
-    .mission-box {
-      background: var(--green-bg);
-      border-left: 4px solid var(--green);
-      border-radius: 0 var(--radius) var(--radius) 0;
-      padding: 24px 28px;
-      margin-top: 16px;
-    }
-
-    .mission-box h3 {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--green);
-      margin-bottom: 8px;
-    }
-
-    .mission-box p {
-      font-size: 14px;
-      color: var(--text);
-      line-height: 1.8;
-      margin: 0;
-    }
-
-    /* 右側圖片+裝飾 */
-    .about-visual {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .about-img-placeholder {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      background: var(--bg-light);
-      border-radius: var(--radius);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .about-img-placeholder .grenade-text {
-      font-family: 'Inter', sans-serif;
-      font-size: 80px;
-      font-weight: 900;
-      color: var(--border);
-      letter-spacing: -3px;
-      user-select: none;
-    }
-
-    .about-visual .green-circle {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: var(--green-mint);
-      opacity: 0.15;
-      top: -30px;
-      right: -30px;
-      z-index: 0;
-    }
-
-    .about-visual .dot-pattern {
-      position: absolute;
-      bottom: -15px;
-      right: -15px;
-      display: grid;
-      grid-template-columns: repeat(5, 6px);
-      gap: 7px;
-      z-index: 2;
-    }
-    .about-visual .dot-pattern span {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--green-mint);
-    }
-
-
-    /* ======================================
-       SECTION 4: CONTENT AREAS
-    ====================================== */
-    #content-areas {
-      padding: 80px 0;
       background: var(--bg-gray);
     }
 
-    .areas-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .area-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px 24px;
+    .intro-inner {
+      max-width: 780px;
+      margin: 0 auto;
       text-align: center;
-      transition: all var(--transition);
     }
 
-    .area-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover);
-      border-color: var(--green-mint);
+    .intro-inner .section-title {
+      margin-bottom: 20px;
     }
 
-    .area-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 14px;
-      margin: 0 auto 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .area-icon svg {
-      width: 28px;
-      height: 28px;
-      stroke-width: 1.8;
-      fill: none;
-    }
-
-    .area-icon.blockchain { background: var(--green-bg); }
-    .area-icon.blockchain svg { stroke: var(--green); }
-
-    .area-icon.ai { background: #eef0ff; }
-    .area-icon.ai svg { stroke: #5B6AFF; }
-
-    .area-icon.invest { background: #fff7ee; }
-    .area-icon.invest svg { stroke: #E5940E; }
-
-    .area-icon.tools { background: #f0f4f8; }
-    .area-icon.tools svg { stroke: #5A6775; }
-
-    .area-card h3 {
-      font-size: 17px;
-      font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 10px;
-    }
-
-    .area-card p {
-      font-size: 13px;
+    .intro-inner p {
+      font-size: 16px;
       color: var(--text-light);
-      line-height: 1.75;
+      line-height: 1.9;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
 
     /* ======================================
-       SECTION 5: SERVICES
+       SECTION 3: SERVICES
     ====================================== */
     #services {
       padding: 80px 0;
@@ -483,15 +319,15 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
     }
 
     .service-card {
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 32px 28px;
+      padding: 36px 32px;
       transition: all var(--transition);
     }
 
@@ -501,23 +337,8 @@
       transform: translateY(-3px);
     }
 
-    .service-icon-area {
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-    }
-
-    .service-icon-area svg,
-    .service-icon-area img {
-      max-width: 140px;
-      height: auto;
-    }
-
-    /* 服務編號 + 標題 */
     .service-header {
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .service-num {
@@ -532,7 +353,7 @@
     }
 
     .service-card h3 {
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 600;
       color: var(--dark);
       line-height: 1.4;
@@ -540,103 +361,235 @@
 
     .service-card:hover h3 { color: var(--green); }
 
-    .service-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .service-card ul li {
-      font-size: 13px;
+    .service-card .service-desc {
+      font-size: 14px;
       color: var(--text-light);
-      padding: 5px 0 5px 18px;
-      position: relative;
-      line-height: 1.7;
+      line-height: 1.8;
+      margin-bottom: 16px;
     }
 
-    .service-card ul li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 13px;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--green-mint);
-    }
-
-    /* 最後兩張卡置中 */
-    .services-grid-bottom {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      max-width: 760px;
-      margin: 20px auto 0;
+    .service-tag {
+      display: inline-block;
+      font-size: 12px;
+      color: var(--green);
+      background: var(--green-bg);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 500;
     }
 
 
     /* ======================================
-       SECTION 6: PROCESS
+       SECTION 4: PROCESS
     ====================================== */
     #process {
       padding: 80px 0;
       background: var(--bg-gray);
     }
 
-    .process-track {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-      text-align: center;
+    /* 水平時間軸 */
+    .process-timeline {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      padding: 0 10px;
+    }
+
+    /* 連接線 */
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: 40px;
+      right: 40px;
+      height: 2px;
+      background: var(--border);
+      z-index: 0;
     }
 
     .process-step {
-      padding: 0 8px;
+      text-align: center;
+      flex: 1;
       position: relative;
+      z-index: 1;
+      padding: 0 8px;
     }
 
-    .step-num {
+    .step-dot {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 3px solid var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      transition: all var(--transition);
+    }
+
+    .step-dot span {
       font-family: 'Inter', sans-serif;
-      font-size: clamp(48px, 6vw, 72px);
-      font-weight: 900;
-      color: var(--border);
-      line-height: 1;
-      margin-bottom: 12px;
-      transition: color var(--transition);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--green);
     }
 
-    .process-step:hover .step-num {
-      color: var(--green-mint);
+    .process-step:hover .step-dot {
+      background: var(--green);
+    }
+    .process-step:hover .step-dot span {
+      color: var(--white);
     }
 
     .step-title {
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 700;
       color: var(--dark);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .step-time {
+      font-size: 12px;
+      color: var(--green);
+      font-weight: 500;
       margin-bottom: 8px;
     }
 
-    .step-label {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 6px;
-    }
-
     .step-desc {
-      font-size: 12px;
+      font-size: 13px;
       color: var(--text-muted);
       line-height: 1.6;
     }
 
+    .process-note {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: var(--text-light);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 24px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
 
     /* ======================================
-       SECTION 7: CTA
+       SECTION 5: TRACK RECORD (成績單)
+    ====================================== */
+    #track-record {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .track-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .track-stat-card {
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--green-bg-light);
+      border-radius: var(--radius);
+      border: 1px solid rgba(35, 164, 85, 0.1);
+    }
+
+    .track-stat-num {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(28px, 3vw, 36px);
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .track-stat-label {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .track-stat-example {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Testimonial */
+    .testimonial {
+      max-width: 680px;
+      margin: 0 auto 48px;
+      text-align: center;
+      padding: 32px;
+      background: var(--bg-gray);
+      border-radius: var(--radius);
+      border-left: 4px solid var(--green);
+    }
+
+    .testimonial blockquote {
+      font-size: 17px;
+      color: var(--dark);
+      line-height: 1.8;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .testimonial cite {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-style: normal;
+    }
+
+    /* Partner Logos */
+    .partners {
+      text-align: center;
+    }
+
+    .partners-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .partner-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .partner-logo {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 12px 24px;
+      background: var(--bg-gray);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      transition: all var(--transition);
+    }
+
+    .partner-logo:hover {
+      border-color: var(--green-mint);
+      color: var(--dark);
+    }
+
+
+    /* ======================================
+       SECTION 6: CTA
     ====================================== */
     #cta {
       padding: 80px 0;
-      background: var(--green-mint);
+      background: var(--dark-deep);
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -651,7 +604,7 @@
       font-family: 'Inter', sans-serif;
       font-size: clamp(80px, 12vw, 160px);
       font-weight: 900;
-      color: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.04);
       white-space: nowrap;
       pointer-events: none;
     }
@@ -662,9 +615,9 @@
       z-index: 1;
     }
 
-    #cta p {
-      font-size: 16px;
-      color: rgba(255,255,255,0.9);
+    #cta .cta-subtitle {
+      font-size: 17px;
+      color: rgba(255,255,255,0.7);
       max-width: 480px;
       margin: 0 auto 32px;
       line-height: 1.8;
@@ -672,18 +625,44 @@
       z-index: 1;
     }
 
-    .btn-white {
-      background: var(--white);
-      color: var(--dark);
-      border-color: var(--white);
+    .cta-btn-area {
       position: relative;
       z-index: 1;
+      margin-bottom: 32px;
     }
-    .btn-white:hover {
-      background: var(--dark);
+
+    .btn-green-lg {
+      background: var(--green);
       color: var(--white);
-      border-color: var(--dark);
-      transform: translateY(-1px);
+      border-color: var(--green);
+      padding: 16px 40px;
+      font-size: 17px;
+      font-weight: 600;
+    }
+    .btn-green-lg:hover {
+      background: var(--green-mint);
+      border-color: var(--green-mint);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(35, 164, 85, 0.3);
+    }
+
+    .cta-contact {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .cta-contact a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      transition: color var(--transition);
+    }
+    .cta-contact a:hover {
+      color: var(--green-mint);
     }
 
 
@@ -693,69 +672,23 @@
     #footer {
       background: var(--dark-deep);
       color: var(--text-muted);
-      padding: 60px 0 40px;
+      padding: 0 0 40px;
+      border-top: 1px solid rgba(255,255,255,0.06);
     }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 60px;
-      margin-bottom: 40px;
-    }
-
-    .footer-brand p {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.8;
-      margin-top: 16px;
-    }
-
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--white);
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 18px;
-    }
-
-    .footer-logo .logo-icon {
-      width: 32px;
-      height: 32px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-    }
-    .footer-logo .logo-icon span {
-      width: 100%;
-      aspect-ratio: 1;
-      background: var(--green);
-      border-radius: 2px;
-    }
-
-    .footer-col h4 {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 16px;
-    }
-
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 8px; }
-    .footer-col ul li a {
-      font-size: 13px;
-      color: var(--text-muted);
-      transition: color var(--transition);
-    }
-    .footer-col ul li a:hover { color: var(--green-mint); }
 
     .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 24px;
       text-align: center;
       font-size: 12px;
       color: rgba(255,255,255,0.3);
+      padding-top: 24px;
+    }
+
+    .footer-bottom a {
+      color: rgba(255,255,255,0.3);
+      margin: 0 8px;
+    }
+    .footer-bottom a:hover {
+      color: var(--green-mint);
     }
 
 
@@ -765,44 +698,51 @@
     @media (max-width: 1024px) {
       .hero-row { grid-template-columns: 1fr; gap: 40px; }
       .hero-visual { display: none; }
-      .about-row { grid-template-columns: 1fr; gap: 40px; }
-      .about-visual { order: -1; }
-      .areas-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-stats { max-width: 100%; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .services-grid-bottom { grid-template-columns: 1fr; max-width: 380px; }
-      .process-track {
-        grid-template-columns: 1fr;
-        text-align: left;
+      .process-timeline {
+        flex-direction: column;
         gap: 24px;
+        align-items: flex-start;
+      }
+      .process-timeline::before {
+        top: 0;
+        bottom: 0;
+        left: 23px;
+        right: auto;
+        width: 2px;
+        height: auto;
       }
       .process-step {
         display: flex;
         gap: 20px;
         align-items: flex-start;
-        padding: 0;
+        text-align: left;
       }
-      .step-num {
-        font-size: 48px;
-        min-width: 60px;
+      .step-dot {
         margin: 0;
+        flex-shrink: 0;
       }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .track-stats { grid-template-columns: repeat(3, 1fr); }
     }
 
     @media (max-width: 768px) {
-      section, #about, #services, #content-areas, #process { padding: 60px 0; }
       #hero { padding: 80px 0 60px; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .areas-grid { grid-template-columns: 1fr; }
+      section { padding: 60px 0; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
       .services-grid { grid-template-columns: 1fr; }
+      .track-stats { grid-template-columns: 1fr; }
       .section-header { margin-bottom: 36px; }
+      .partner-logos { gap: 16px; }
+      .cta-contact { flex-direction: column; gap: 12px; }
     }
 
     @media (max-width: 480px) {
       .container { padding: 0 16px; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .hero-stats { grid-template-columns: 1fr; }
       .hero-actions { flex-direction: column; }
       .btn { width: 100%; justify-content: center; }
+      .partner-logo { font-size: 14px; padding: 10px 16px; }
     }
 
 
@@ -827,14 +767,53 @@
         <div class="hero-text">
           <h1>
             <span class="green">Grenade</span> 手榴彈<br>
-            科技金融資訊的最後一里路
+            華語科技金融內容 &times; 一站式品牌增長引擎
           </h1>
           <p class="subtitle">
-            從區塊鏈到 AI，從投資理財到前沿科技——我們用專業內容與整合服務，為品牌與讀者創造最大價值。
+            從 Web3 到 AI，我們幫助客戶、交易所、品牌在華語圈快速建立聲量、信任與成長。<br>
+            Key to the New World. 開啟新世界的鑰匙
           </p>
           <div class="hero-actions">
-            <a href="#services" class="btn btn-green">瞭解我們的服務 <span class="arrow">→</span></a>
-            <a href="/contact-us/" class="btn btn-outline-dark">Contact Us</a>
+            <a href="#" class="btn btn-green">立即免費 15 分鐘策略諮詢 <span class="arrow">→</span></a>
+            <a href="#" class="btn btn-outline-dark">Contact Us</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat fade-up">
+              <div class="hero-stat-icon">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              </div>
+              <div>
+                <div class="hero-stat-num">500+</div>
+                <div class="hero-stat-label">成功案例</div>
+              </div>
+            </div>
+            <div class="hero-stat fade-up">
+              <div class="hero-stat-icon">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+              </div>
+              <div>
+                <div class="hero-stat-num">200+</div>
+                <div class="hero-stat-label">知名項目與夥伴</div>
+              </div>
+            </div>
+            <div class="hero-stat fade-up">
+              <div class="hero-stat-icon">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div>
+                <div class="hero-stat-num">250+</div>
+                <div class="hero-stat-label">場線上/線下活動</div>
+              </div>
+            </div>
+            <div class="hero-stat fade-up">
+              <div class="hero-stat-icon">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <div class="hero-stat-num">65,000+</div>
+                <div class="hero-stat-label">華語社群活躍用戶</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="hero-visual">
@@ -871,115 +850,14 @@
   </section>
 
 
-  <!-- ========== STATS ========== -->
-  <section id="stats">
+  <!-- ========== INTRO ========== -->
+  <section id="intro">
     <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card fade-up">
-          <div class="stat-icon">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <div class="stat-number">2,063</div>
-          <div class="stat-label">社群人數</div>
-        </div>
-        <div class="stat-card fade-up">
-          <div class="stat-icon">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </div>
-          <div class="stat-number">20</div>
-          <div class="stat-label">線上下活動</div>
-        </div>
-        <div class="stat-card fade-up">
-          <div class="stat-icon">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
-          </div>
-          <div class="stat-number">11</div>
-          <div class="stat-label">合作夥伴</div>
-        </div>
-        <div class="stat-card fade-up">
-          <div class="stat-icon">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="6 8 10 12 14 9 18 13"/></svg>
-          </div>
-          <div class="stat-number">24</div>
-          <div class="stat-label">成功案例</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========== ABOUT ========== -->
-  <section id="about">
-    <div class="container">
-      <div class="about-row">
-        <div class="about-text">
-          <div class="section-header">
-            <h2 class="section-title">手榴彈</h2>
-            <div class="section-label">Grenade</div>
-            <div class="title-line"></div>
-          </div>
-          <p>Grenade 手榴彈成立於 2019 年，起初以區塊鏈產業資訊為核心，致力於消弭市場的資訊落差。隨著產業快速演進，我們的關注領域也持續擴展——從加密貨幣、DeFi、NFT，到人工智慧應用、金融科技、投資理財策略，Grenade 始終站在趨勢前沿，為讀者提供最即時、最深入的中文內容。</p>
-          <p>我們相信，好的資訊不只是報導，更是連結產業與大眾的橋樑。無論你是剛踏入幣圈的新手、關注 AI 工具的創作者，還是尋求市場洞察的投資人，Grenade 都是你探索新世界的起點。</p>
-          <p>「Key to the new world.」引爆最具影響力的熱門話題，即刻撼動科技金融社群，手榴彈陪你一塊擁抱新世界！</p>
-          <div class="mission-box">
-            <h3>我們的使命</h3>
-            <p>成為華語圈最值得信賴的科技金融資訊平台，用專業內容降低知識門檻，讓每個人都能掌握趨勢、做出明智決策。</p>
-          </div>
-        </div>
-        <div class="about-visual">
-          <div class="green-circle"></div>
-          <div class="about-img-placeholder">
-            <span class="grenade-text">GRENADE</span>
-          </div>
-          <div class="dot-pattern">
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========== CONTENT AREAS ========== -->
-  <section id="content-areas">
-    <div class="container">
-      <div class="section-header center">
-        <h2 class="section-title">我們涵蓋的領域</h2>
-        <p class="section-desc">從鏈上世界到鏈下生活，Grenade 的內容版圖持續擴張。</p>
-        <div class="title-line"></div>
-      </div>
-      <div class="areas-grid">
-        <div class="area-card fade-up">
-          <div class="area-icon blockchain">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="8" height="8" rx="1"/><rect x="15" y="1" width="8" height="8" rx="1"/><rect x="8" y="15" width="8" height="8" rx="1"/><line x1="5" y1="9" x2="5" y2="15"/><line x1="19" y1="9" x2="19" y2="15"/><line x1="9" y1="5" x2="15" y2="5"/><line x1="5" y1="15" x2="8" y2="19"/><line x1="19" y1="15" x2="16" y2="19"/></svg>
-          </div>
-          <h3>區塊鏈與加密貨幣</h3>
-          <p>比特幣、以太坊、DeFi、NFT、鏈遊到迷因幣——最完整的加密貨幣知識庫與市場分析，從入門教學到進階策略一應俱全。</p>
-        </div>
-        <div class="area-card fade-up">
-          <div class="area-icon ai">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M16 14h.01"/><path d="M8 14h.01"/><path d="M12 17v4"/><path d="M8 21h8"/><rect x="3" y="11" width="18" height="8" rx="3"/></svg>
-          </div>
-          <h3>人工智慧與科技趨勢</h3>
-          <p>AI 工具實測、應用教學與產業觀察。從 Grok、NotebookLM 到各類 AI Agent，幫你掌握最新科技脈動，提升工作與創作效率。</p>
-        </div>
-        <div class="area-card fade-up">
-          <div class="area-icon invest">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-          </div>
-          <h3>投資理財</h3>
-          <p>加密貨幣交易策略、交易所評比、金融卡比較、黃金與傳統資產配置——提供多元的理財資訊，協助你建立穩健的投資組合。</p>
-        </div>
-        <div class="area-card fade-up">
-          <div class="area-icon tools">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-          </div>
-          <h3>實用工具與安全防護</h3>
-          <p>錢包教學、詐騙辨識、VPN 推薦、LINE 機器人等實用資源，讓你在數位世界中安全又高效地操作。</p>
-        </div>
+      <div class="intro-inner fade-up">
+        <div class="section-label">ABOUT OUR SERVICES</div>
+        <h2 class="section-title">關於我們的服務</h2>
+        <div class="title-line" style="margin: 16px auto 24px;"></div>
+        <p>Grenade 手榴彈從 2019 年深耕區塊鏈社群起步，如今已成為華語科技金融領域最具影響力的內容與品牌服務提供者。我們將累積的社群資源、媒體關係與執行經驗，轉化為一站式品牌整合服務，幫助新項目、交易所、AI/Web3 品牌解決「華語圈曝光難、信任建立慢、轉換率低」的痛點。</p>
       </div>
     </div>
   </section>
@@ -989,76 +867,46 @@
   <section id="services">
     <div class="container">
       <div class="section-header center">
+        <div class="section-label">GRENADE SERVICES</div>
         <h2 class="section-title">手榴彈服務</h2>
-        <div class="section-label">Grenade Service</div>
         <div class="title-line"></div>
       </div>
 
       <div class="services-grid">
         <div class="service-card fade-up">
           <div class="service-header">
-            <span class="service-num">01. 媒體宣傳</span>
-            <h3>媒體公關與品牌曝光</h3>
+            <span class="service-num">01</span>
+            <h3>官網內容與 SEO 曝光</h3>
           </div>
-          <ul>
-            <li>品牌專欄與贊助內容合作（會員 / VIP）</li>
-            <li>網站廣告版位（Banner / 側欄 / 文章頁面）</li>
-            <li>Podcast（What the Block｜區塊夜未眠）</li>
-            <li>科技金融領域媒體聯播與新聞稿發佈</li>
-          </ul>
+          <p class="service-desc">專業中文 SEO 文章撰寫 + 官網廣告投放，提升自然排名與品牌曝光。</p>
+          <span class="service-tag">適合：新項目上線、長期聲量建立</span>
         </div>
 
         <div class="service-card fade-up">
           <div class="service-header">
-            <span class="service-num">02. 活動策劃</span>
-            <h3>活動企劃與執行</h3>
+            <span class="service-num">02</span>
+            <h3>多平台社群內容與廣告</h3>
           </div>
-          <ul>
-            <li>線上活動：Airdrop / AMA / 線上直播</li>
-            <li>線下活動：產品發表會 / Meetup / 主題講座</li>
-            <li>跨界合作活動策劃與落地執行</li>
-          </ul>
+          <p class="service-desc">客製社群媒體圖文、影片、討論內容 + 社群廣告投放，可導流至私有社群深度互動。</p>
+          <span class="service-tag">適合：日常運營、病毒內容、跨平台觸及</span>
         </div>
 
         <div class="service-card fade-up">
           <div class="service-header">
-            <span class="service-num">03. 社群經營</span>
-            <h3>社群經營與 KOL 合作</h3>
+            <span class="service-num">03</span>
+            <h3>活動策劃與執行</h3>
           </div>
-          <ul>
-            <li>社群 AMA 策劃與群組建立</li>
-            <li>KOL / 意見領袖媒合與推廣</li>
-            <li>策略建議暨指導</li>
-            <li>社群平台代營運</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="services-grid-bottom">
-        <div class="service-card fade-up">
-          <div class="service-header">
-            <span class="service-num">04. 顧問服務</span>
-            <h3>顧問諮詢</h3>
-          </div>
-          <ul>
-            <li>人才招募與戰略資源媒合</li>
-            <li>品牌發展策略規劃</li>
-            <li>行銷節奏規劃與成效優化</li>
-            <li>活動規劃與關係維護</li>
-          </ul>
+          <p class="service-desc">線上/線下活動規劃（產品上線 AMA、台灣市場進入推廣、節慶企劃），可透過私有社群預熱、招募與後續討論。</p>
+          <span class="service-tag">適合：用戶拉新、媒體討論、品牌落地</span>
         </div>
 
         <div class="service-card fade-up">
           <div class="service-header">
-            <span class="service-num">05. 品牌內容</span>
-            <h3>內容製作與創意設計</h3>
+            <span class="service-num">04</span>
+            <h3>市場進入策略顧問</h3>
           </div>
-          <ul>
-            <li>圖文懶人包製作</li>
-            <li>新聞稿撰寫 / 深度內容專題</li>
-            <li>影片製作、音頻業配寫</li>
-            <li>多語言翻譯與在地化內容</li>
-          </ul>
+          <p class="service-desc">台灣/華語圈 KOL 與合作夥伴資源媒合 + 客製顧問，結合私有社群洞察加速落地與信任建立。</p>
+          <span class="service-tag">適合：國際項目進軍華語市場、資源連結</span>
         </div>
       </div>
     </div>
@@ -1069,45 +917,98 @@
   <section id="process">
     <div class="container">
       <div class="section-header center">
+        <div class="section-label">GRENADE PROCESS</div>
         <h2 class="section-title">手榴彈服務流程</h2>
-        <div class="section-label">Grenade Process</div>
         <div class="title-line"></div>
       </div>
-      <div class="process-track">
+      <div class="process-timeline">
         <div class="process-step fade-up">
-          <div class="step-num">01</div>
+          <div class="step-dot"><span>1</span></div>
           <div>
-            <div class="step-title">STEP 01. 聆聽需求</div>
-            <div class="step-desc">了解品牌目標、受眾輪廓與行業趨勢，釐清合作方向。</div>
+            <div class="step-title">對齊需求</div>
+            <div class="step-time">1-2 週</div>
+            <div class="step-desc">深度訪談 + 了解客戶需求</div>
           </div>
         </div>
         <div class="process-step fade-up">
-          <div class="step-num">02</div>
+          <div class="step-dot"><span>2</span></div>
           <div>
-            <div class="step-title">STEP 02. 發展策略</div>
-            <div class="step-desc">為品牌制定推廣方向、行銷策略與執行時程。</div>
+            <div class="step-title">策略規劃</div>
+            <div class="step-time">&nbsp;</div>
+            <div class="step-desc">根據你的目標與預算，制定專屬內容、社群與增長策略</div>
           </div>
         </div>
         <div class="process-step fade-up">
-          <div class="step-num">03</div>
+          <div class="step-dot"><span>3</span></div>
           <div>
-            <div class="step-title">STEP 03. 執行測試</div>
-            <div class="step-desc">運行規劃內容，測試效果、提升互動。</div>
+            <div class="step-title">執行測試</div>
+            <div class="step-time">&nbsp;</div>
+            <div class="step-desc">小規模先跑內容（官網文章、社群貼文、廣告），快速驗證效果並提供數據報告 + 優化建議</div>
           </div>
         </div>
         <div class="process-step fade-up">
-          <div class="step-num">04</div>
+          <div class="step-dot"><span>4</span></div>
           <div>
-            <div class="step-title">STEP 04. 放大聲量</div>
-            <div class="step-desc">提升市場討論度、關注度，迎合受眾。</div>
+            <div class="step-title">放大聲量</div>
+            <div class="step-time">&nbsp;</div>
+            <div class="step-desc">正式投放多渠道（媒體、社群廣告、活動、私有社群導流），引爆華語圈影響力</div>
           </div>
         </div>
         <div class="process-step fade-up">
-          <div class="step-num">05</div>
+          <div class="step-dot"><span>5</span></div>
           <div>
-            <div class="step-title">STEP 05. 分析覆盤</div>
-            <div class="step-desc">回顧表現，檢視數據資料、搜集可實現的洞見。</div>
+            <div class="step-title">分析覆盤</div>
+            <div class="step-time">&nbsp;</div>
+            <div class="step-desc">完整數據報告 + 下階段優化建議，讓每輪合作更精準</div>
           </div>
+        </div>
+      </div>
+      <div class="process-note fade-up">
+        完整一輪合作通常需 4-12 週，我們採用敏捷式執行，每 1-2 週與您同步進度與數據。
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== TRACK RECORD ========== -->
+  <section id="track-record">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">TRACK RECORD</div>
+        <h2 class="section-title">我們的成績單</h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="track-stats">
+        <div class="track-stat-card fade-up">
+          <div class="track-stat-num">250,000+</div>
+          <div class="track-stat-label">社群總觸及華語用戶</div>
+        </div>
+        <div class="track-stat-card fade-up">
+          <div class="track-stat-num">24+</div>
+          <div class="track-stat-label">成功案例</div>
+          <div class="track-stat-example">例：某中型交易所 AMA 活動 → 觸及 50 萬人、報名轉化率 15%</div>
+        </div>
+        <div class="track-stat-card fade-up">
+          <div class="track-stat-num">11+</div>
+          <div class="track-stat-label">合作夥伴</div>
+          <div class="track-stat-example">國際知名交易所、頂尖 AI 項目等</div>
+        </div>
+      </div>
+
+      <div class="testimonial fade-up">
+        <blockquote>「Grenade 幫我們在華語圈快速建立信任與流量，AMA 活動報名超出預期 3 倍。」</blockquote>
+        <cite>— 某 AI 項目負責人</cite>
+      </div>
+
+      <div class="partners fade-up">
+        <div class="partners-label">合作夥伴</div>
+        <div class="partner-logos">
+          <div class="partner-logo">Binance 幣安</div>
+          <div class="partner-logo">OKX</div>
+          <div class="partner-logo">Bybit</div>
+          <div class="partner-logo">Kraken</div>
+          <div class="partner-logo">Backpack</div>
         </div>
       </div>
     </div>
@@ -1117,9 +1018,15 @@
   <!-- ========== CTA ========== -->
   <section id="cta">
     <div class="container">
-      <h2 class="section-title">準備好開始了嗎？</h2>
-      <p>無論你是品牌方尋求曝光，還是專案方需要整合行銷，歡迎與 Grenade 團隊聊聊。</p>
-      <a href="/contact-us/" class="btn btn-white">Contact Us <span class="arrow">→</span></a>
+      <h2 class="section-title">準備好引爆你的品牌了嗎？</h2>
+      <p class="cta-subtitle">讓我們一起開啟科技金融的新世界。</p>
+      <div class="cta-btn-area">
+        <a href="#" class="btn btn-green-lg">免費 15 分鐘策略對談 <span class="arrow">→</span></a>
+      </div>
+      <div class="cta-contact">
+        <a href="https://t.me/grenade_tw">Telegram: @grenade_tw</a>
+        <a href="mailto:hello@grenade.tw">Email: hello@grenade.tw</a>
+      </div>
     </div>
   </section>
 
@@ -1127,37 +1034,10 @@
   <!-- ========== FOOTER ========== -->
   <footer id="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <div class="logo-icon">
-              <span></span><span></span><span></span>
-              <span></span><span></span><span></span>
-              <span></span><span></span><span></span>
-            </div>
-            GRENADE
-          </div>
-          <p>我們深耕科技金融領域，擁有最活躍的社群，<br>提供一站式整合服務。</p>
-        </div>
-        <div class="footer-col">
-          <h4>Grenade</h4>
-          <ul>
-            <li><a href="/about-us/">關於我們</a></li>
-            <li><a href="/contact-us/">聯絡我們</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>資訊</h4>
-          <ul>
-            <li><a href="#">新手教學</a></li>
-            <li><a href="#">加密卡</a></li>
-            <li><a href="#">交易所</a></li>
-            <li><a href="#">AI</a></li>
-          </ul>
-        </div>
-      </div>
       <div class="footer-bottom">
-        &copy; 2025 Grenade. All rights reserved.
+        &copy; 2026 Grenade 手榴彈. All rights reserved.
+        <a href="#">隱私政策</a>
+        <a href="https://grenade.tw">回首頁</a>
       </div>
     </div>
   </footer>
